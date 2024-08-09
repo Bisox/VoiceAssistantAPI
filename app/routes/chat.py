@@ -4,6 +4,7 @@ from app.utils.chatgpt import get_chatgpt_response
 
 router = APIRouter()
 
+
 @router.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     try:

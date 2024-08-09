@@ -2,14 +2,11 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    API_KEY: str
+    API_KEY: str = 'sk-proj-1qf1kLWVTkJIoac0WTUeT3BlbkFJ39tiwItLtFs6vP4HoyAC'
 
     class Config:
         env_file = ".env"
 
-    @property
-    def API_KEY(self):
-        return self.API_KEY
-
 
 settings = Settings()
+
